@@ -1,0 +1,29 @@
+{
+  "pokemones": [
+    {
+      "id": 1,
+      "name": "charmander",
+      "type": "fire"
+    },
+    {
+      "id": 2,
+      "name": "pikachu",
+      "type": "electric"
+    },
+    {
+      "id": 3,
+      "name": "totodile",
+      "type": "water"
+    },
+    {
+      "id": 4,
+      "name": "greninja",
+      "type": "dark"
+    },
+    {
+      "id": 5,
+      "name": "tyranitar",
+      "type": "rock"
+    }
+  ]
+}
