@@ -20,17 +20,25 @@ export const helpHttp = () => {
       controller.abort();
     }, 3000);
 
-    return fetch(endpoint, options).then((response) => {
-      if (response.ok) {
-        return response.json();
-      } else {
-        Promise.reject({
+    return fetch(endpoint, options)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          return Promise.reject({
+            err: true,
+            status: response.status || "000",
+            statusText: response.statusText || "Error ocurred",
+          });
+        }
+      })
+      .catch((err) => {
+        return Promise.reject({
           err: true,
-          status: response.status || "000",
-          statusText: response.statusText || "Error ocurred",
+          status: err.status || "000",
+          statusText: err.statusText || "Error ocurred",
         });
-      }
-    });
+      });
   };
 
   const get = (url, options = {}) => {

@@ -4,32 +4,33 @@ import CrudTableRow from "./TableRow";
 const CurdTable = ({ pokemonList, setDataToEdit, deleteData }) => {
   return (
     <>
-      <h3>Data table</h3>
-      <table className='table'>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {pokemonList.length === 0 ? (
+      <div className="container">
+        <table className="table">
+          <thead>
             <tr>
-              <td colSpan="3">Without data</td>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Actions</th>
             </tr>
-          ) : (
-            pokemonList.map((pokemon) => (
-              <CrudTableRow
-                key={pokemon.id}
-                pokemon={pokemon}
-                deleteData={deleteData}
-                setDataToEdit={setDataToEdit}
-              />
-            ))
-          )}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {pokemonList.length > 0 ? (
+              pokemonList.map((pokemon) => (
+                <CrudTableRow
+                  key={pokemon.id}
+                  pokemon={pokemon}
+                  deleteData={deleteData}
+                  setDataToEdit={setDataToEdit}
+                />
+              ))
+            ) : (
+              <tr>
+                <td colSpan="3">Without data</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
     </>
   );
 };

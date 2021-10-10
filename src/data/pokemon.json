@@ -7,7 +7,7 @@
     },
     {
       "id": 2,
-      "name": "pikachu",
+      "name": "pichu",
       "type": "electric"
     },
     {
@@ -16,14 +16,29 @@
       "type": "water"
     },
     {
-      "id": 4,
-      "name": "greninja",
-      "type": "dark"
-    },
-    {
       "id": 5,
       "name": "tyranitar",
       "type": "rock"
+    },
+    {
+      "id": 1633816417323,
+      "name": "groudon",
+      "type": "ground"
+    },
+    {
+      "id": 1633817048332,
+      "name": "tauros",
+      "type": "normal"
+    },
+    {
+      "id": 1633817114284,
+      "name": "politoed",
+      "type": "water"
+    },
+    {
+      "id": 1633817278529,
+      "name": "greninja",
+      "type": "dark"
     }
   ]
 }
